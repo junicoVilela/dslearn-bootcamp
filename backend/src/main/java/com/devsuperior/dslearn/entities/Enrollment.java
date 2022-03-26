@@ -4,6 +4,8 @@ import com.devsuperior.dslearn.entities.pk.EnrollmentPK;
 
 import javax.persistence.*;
 import java.time.Instant;
+import java.util.HashSet;
+import java.util.Set;
 
 @Table
 @Entity(name = "tb_enrollment")
@@ -20,6 +22,9 @@ public class Enrollment {
 
     private boolean available;
     private boolean onlyUpdate;
+
+    @ManyToMany(mappedBy = "enrollmentsDone")
+    private Set<Lesson> lessonsDone = new HashSet<>();
 
     public Enrollment() {
     }
