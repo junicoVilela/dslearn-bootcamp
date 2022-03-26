@@ -21,3 +21,7 @@ INSERT INTO tb_offer (edition, start_moment, end_moment, course_id) VALUES ('2.0
 INSERT INTO tb_resource (title, description, position, img_uri, resource_type, offer_id) VALUES ('Trilha HTML', 'Trilha principal do curso', 1, 'https://www.devmedia.com.br/arquivos/cursos/HTML_tags/thumb.png', 1, 1);
 INSERT INTO tb_resource (title, description, position, img_uri, resource_type, offer_id) VALUES ('Forum', 'Tire suas dúvidas', 2, 'https://www.devmedia.com.br/arquivos/cursos/HTML_tags/thumb.png', 2, 1);
 INSERT INTO tb_resource (title, description, position, img_uri, resource_type, offer_id) VALUES ('Lives', 'Lives exclusivas para a turma', 3, 'https://www.devmedia.com.br/arquivos/cursos/HTML_tags/thumb.png', 0, 1);
+
+INSERT  INTO tb_section (title, description, position, img_uri, resource_id, prerequisite_id) VALUES ('Capítulo 1', 'Neste capítulo vamos iniciar', 1, 'https://www.devmedia.com.br/arquivos/cursos/HTML_tags/thumb.png', 1, null);
+INSERT  INTO tb_section (title, description, position, img_uri, resource_id, prerequisite_id) VALUES ('Capítulo 2', 'Neste capítulo vamos continuar', 2, 'https://www.devmedia.com.br/arquivos/cursos/HTML_tags/thumb.png', 1, 1);
+INSERT  INTO tb_section (title, description, position, img_uri, resource_id, prerequisite_id) VALUES ('Capítulo 3', 'Neste capítulo vamos finalizar', 3, 'https://www.devmedia.com.br/arquivos/cursos/HTML_tags/thumb.png', 1, 2);
