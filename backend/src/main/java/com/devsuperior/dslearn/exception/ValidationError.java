@@ -1,4 +1,4 @@
-package com.devsuperior.dslearn.service.exceptions;
+package com.devsuperior.dslearn.exception;
 
 import java.util.ArrayList;
 import java.util.List;

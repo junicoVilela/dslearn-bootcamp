@@ -1,7 +1,11 @@
-package com.devsuperior.dslearn.service.exceptions;
+package com.devsuperior.dslearn.exception;
 
 import com.amazonaws.AmazonClientException;
 import com.amazonaws.AmazonServiceException;
+import com.devsuperior.dslearn.service.exceptions.DataBaseException;
+import com.devsuperior.dslearn.service.exceptions.ForbiddenException;
+import com.devsuperior.dslearn.service.exceptions.ResourceNotFoundException;
+import com.devsuperior.dslearn.service.exceptions.UnauthorizedException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.FieldError;
@@ -101,6 +105,20 @@ public class RestResponseEntityExceptionHandler {
                         exception.getMessage(),
                         request.getDescription(false));
         return new ResponseEntity<>(errorDetails, HttpStatus.BAD_REQUEST);
+    }
+
+    @ExceptionHandler(ForbiddenException.class)
+    public ResponseEntity<?> forbidden(ForbiddenException exception){
+        OAuthCustomError err =
+                new OAuthCustomError("Forbidden", exception.getMessage());
+        return new ResponseEntity<>(err, HttpStatus.FORBIDDEN);
+    }
+
+    @ExceptionHandler(UnauthorizedException.class)
+    public ResponseEntity<?> unauthorized(UnauthorizedException exception){
+        OAuthCustomError err =
+                new OAuthCustomError("Unauthorized", exception.getMessage());
+        return new ResponseEntity<>(err, HttpStatus.UNAUTHORIZED);
     }
 
 }

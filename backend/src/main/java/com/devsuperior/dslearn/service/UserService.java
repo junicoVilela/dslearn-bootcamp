@@ -19,12 +19,18 @@ public class UserService implements UserDetailsService {
 
     private UserRepository userRepository;
 
-    public UserService(UserRepository userRepository) {
+    private AuthService authService;
+
+    public UserService(UserRepository userRepository, AuthService authService) {
         this.userRepository = userRepository;
+        this.authService = authService;
     }
 
     @Transactional(readOnly = true)
     public UserDTO findById(Long id) {
+
+        authService.validateSelfOrAdmin(id);
+
         User entity = userRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Entity not found"));
         return new UserDTO(entity);
     }
