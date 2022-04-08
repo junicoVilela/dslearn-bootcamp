@@ -4,8 +4,8 @@ import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Objects;
 
-@Table
-@Entity(name = "tb_section")
+@Entity
+@Table(name = "tb_section")
 public class Section implements Serializable {
     private static final long serialVersionUID = -8880047097935163381L;
 

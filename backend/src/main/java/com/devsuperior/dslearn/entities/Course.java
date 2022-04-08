@@ -5,8 +5,8 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-@Table
-@Entity(name = "tb_course")
+@Entity
+@Table(name = "tb_course")
 public class Course implements Serializable {
     private static final long serialVersionUID = 1760265551057306026L;
 

@@ -9,8 +9,9 @@ import java.io.Serializable;
 import java.util.*;
 import java.util.stream.Collectors;
 
-@Table
-@Entity(name = "tb_user")
+
+@Entity
+@Table(name = "tb_user")
 public class User implements UserDetails, Serializable {
     private static final long serialVersionUID = 338652378204526258L;
 

@@ -5,8 +5,8 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 import java.time.Instant;
 
-@Table
-@Entity(name = "tb_task")
+@Entity
+@Table(name = "tb_task")
 public class Task extends Lesson {
     private static final long serialVersionUID = -6083196798475074922L;
 

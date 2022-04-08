@@ -4,8 +4,9 @@ import javax.persistence.*;
 import java.io.Serializable;
 import java.util.*;
 
-@Table
-@Entity(name = "tb_lesson")
+
+@Entity
+@Table(name = "tb_lesson")
 @Inheritance(strategy = InheritanceType.JOINED)
 public abstract class Lesson implements Serializable {
     private static final long serialVersionUID = 4781029365830207277L;

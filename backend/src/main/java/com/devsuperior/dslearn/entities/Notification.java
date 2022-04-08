@@ -5,8 +5,8 @@ import java.io.Serializable;
 import java.time.Instant;
 import java.util.Objects;
 
-@Table
-@Entity(name = "tb_notification")
+@Entity
+@Table(name = "tb_notification")
 public class Notification implements Serializable {
     private static final long serialVersionUID = 7260278903729275174L;
 
@@ -98,3 +98,4 @@ public class Notification implements Serializable {
         return Objects.hash(id);
     }
 }
+

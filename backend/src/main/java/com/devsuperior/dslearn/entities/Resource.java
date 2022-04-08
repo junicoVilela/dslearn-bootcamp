@@ -7,8 +7,8 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-@Table
-@Entity(name = "tb_resource")
+@Entity
+@Table(name = "tb_resource")
 public class Resource implements Serializable {
     private static final long serialVersionUID = 1185709287071340743L;
 

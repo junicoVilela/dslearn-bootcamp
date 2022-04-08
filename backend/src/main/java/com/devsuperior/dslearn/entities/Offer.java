@@ -6,8 +6,8 @@ import java.time.Instant;
 import java.util.ArrayList;
 import java.util.List;
 
-@Table
-@Entity(name = "tb_offer")
+@Entity
+@Table(name = "tb_offer")
 public class Offer implements Serializable {
     private static final long serialVersionUID = 6974085456015436423L;
 

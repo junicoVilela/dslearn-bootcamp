@@ -6,8 +6,8 @@ import javax.persistence.*;
 import java.time.Instant;
 import java.util.*;
 
-@Table
-@Entity(name = "tb_enrollment")
+@Entity
+@Table(name = "tb_enrollment")
 public class Enrollment {
 
     @EmbeddedId

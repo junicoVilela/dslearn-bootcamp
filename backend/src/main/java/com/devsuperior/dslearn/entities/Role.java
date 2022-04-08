@@ -3,8 +3,8 @@ package com.devsuperior.dslearn.entities;
 import javax.persistence.*;
 import java.io.Serializable;
 
-@Table
-@Entity(name = "tb_role")
+@Entity
+@Table(name = "tb_role")
 public class Role implements Serializable {
     private static final long serialVersionUID = 7638323153579749189L;
 

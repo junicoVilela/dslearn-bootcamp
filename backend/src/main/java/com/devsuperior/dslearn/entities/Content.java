@@ -3,8 +3,8 @@ package com.devsuperior.dslearn.entities;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
-@Table
-@Entity(name = "tb_content")
+@Entity
+@Table(name = "tb_content")
 public class Content extends Lesson{
     private static final long serialVersionUID = 65410897630579702L;
 
